@@ -1,4 +1,6 @@
 library(datasets)
+
+# household_power_consumption.txt must be found in the working directory
 houseData <- read.table("household_power_consumption.txt", sep = ";", header = TRUE, na.strings = "?",
                     colClasses = c("factor", "character", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric"))
 
