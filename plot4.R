@@ -21,7 +21,7 @@ png(filename = "plot4.png", width=504, height = 504)
 par(mfrow=c(2,2))
 
 # Active global power plot
-with(usage, plot(dateTime, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))
+with(usage, plot(dateTime, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power"))
 
 # Voltage plot
 with(usage, plot(dateTime, Voltage, type = "l", xlab = "datetime", ylab = "Volate"))
