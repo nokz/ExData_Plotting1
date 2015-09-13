@@ -13,6 +13,6 @@ houseData$Time <- format(houseData$Time, format='%H:%M:%S')
 usage <- houseData[houseData$Date >= "2007-02-01" & houseData$Date <= "2007-02-02", ]
 
 # Create plot and save as PNG
+png(filename = "plot1.png", width=504, height = 504)
 with(usage, hist(Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)"))
-dev.copy(png, file="plot1.png")
 dev.off()

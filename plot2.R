@@ -1,5 +1,4 @@
 library(datasets)
-library(dplyr)
 
 # household_power_consumption.txt must be found in the working directory
 houseData <- read.table("household_power_consumption.txt", sep = ";", header = TRUE, na.strings = "?",
@@ -19,6 +18,6 @@ houseData$dateTime <- dateTime
 usage <- houseData[houseData$Date >= "2007-02-01" & houseData$Date <= "2007-02-02", ]
 
 # Recreate reference plot
+png(filename = "plot3.png", width=504, height = 504)
 with(usage, plot(dateTime, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))
-dev.copy(png, file="plot2.png")
 dev.off()
